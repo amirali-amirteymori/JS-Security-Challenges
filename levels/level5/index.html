@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Level 05</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="card">
+    <h2>LEVEL 05</h2>
+
+    <div class="task">
+      <strong>Your Name</strong>
+      <p>Enter your name below:</p>
+      <form action="" id="nameForm" method="get">
+        <input type="text" name="name" placeholder="Your Name" required style="padding:8px 10px; border-radius:6px; border:1px solid #1e293b; width:80%; margin-bottom:12px;">
+        <br>
+        <button type="submit" style="padding:10px 20px; border:none; border-radius:6px; background:#38bdf8; color:#020617; font-weight:600; cursor:pointer; transition:0.25s;">
+          Submit
+        </button>
+      </form>
+    </div>
+
+    <a class="back" href="../../index.html">← Back to Levels</a>
+
+    <footer>
+      Interaction is key.
+    </footer>
+  </div>
+
+  <script>
+    function getParameterByName (name) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get('name');
+    }
+
+    const name = getParameterByName('name');
+    if (name) {
+      document.querySelector("form").style.display = "none";
+      document.querySelector("p").textContent = `Welcome, ${name}!`;
+    }
+  </script>
+
+</body>
+</html>
