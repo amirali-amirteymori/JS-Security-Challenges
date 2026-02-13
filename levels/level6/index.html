@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Level 06</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="card">
+    <h2>LEVEL 06</h2>
+
+    <div class="task">
+      <strong>OTP Verification</strong>
+      <p>Enter your OTP code:</p>
+
+      <form id="otpForm">
+        <input
+          type="text"
+          id="otp"
+          placeholder="Enter OTP code"
+          required
+        >
+        <br>
+        <button type="submit">Verify</button>
+      </form>
+
+      <p id="message"></p>
+    </div>
+
+    <a class="back" href="../../index.html">← Back to Levels</a>
+
+    <footer>
+      Attention to detail is everything.
+    </footer>
+  </div>
+
+  <script>
+    const form = document.getElementById("otpForm");
+    const message = document.getElementById("message");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const otp = document.getElementById("otp").value;
+
+      message.textContent = `OTP code ${otp} is incorrect. Please try again.`;
+
+      window.location.hash = otp;
+    });
+  </script>
+
+</body>
+</html>
