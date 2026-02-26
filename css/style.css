@@ -1,0 +1,29 @@
+body {
+  font-family: sans-serif;
+  background: #0f172a;
+  color: #fff;
+  text-align: center;
+  padding: 40px;
+}
+
+.levels {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+  max-width: 500px;
+  margin: auto;
+}
+
+.levels a {
+  background: #1e293b;
+  padding: 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+  transition: 0.2s;
+}
+
+.levels a:hover {
+  background: #38bdf8;
+  color: #000;
+}
