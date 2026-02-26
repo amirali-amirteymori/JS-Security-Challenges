@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LEVEL 08</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="card">
+    <h2>LEVEL 08</h2>
+
+    <div class="task">
+      <strong>Local Storage Token</strong>
+      <p>There's a token stored in the browser's local storage.</p>
+      <p>Use JavaScript to retrieve the token and display it using an alert.</p>
+    </div>
+
+    <a class="back" href="../../index.html">← Back to Levels</a>
+
+    <footer>
+      Check the storage carefully.
+    </footer>
+  </div>
+
+  <script>
+    if (!localStorage.getItem('token')) {
+      localStorage.setItem('token', 'RIVE-SECRET-TOKEN-2025');
+    }
+
+    const token = localStorage.getItem('token');
+  </script>
+
+</body>
+</html>
